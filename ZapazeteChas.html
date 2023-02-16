@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запазете час</title>
+    <link rel = "icon" href="My project (3).png">
+    <link rel = "stylesheet" type="text/css"href="zapazvanenachas.css">
+    <link rel = "stylesheet"href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+<li><a href="NextGen.html">Начало</a></li>
+<li><a href="Ekip.html">Екип</a></li>
+<li><a href="ZapazeteChas.html">Услуги</a></li>
+<li><a href="News.html">Новини</a></li>
+<li><a href="Kontakti.html">Контакти</a></li>
+</ul>
+</div> 
+<img style="height: 50px;width: 50px; margin-left: 60px; margin-top: -78px;" src="288330141_2309681042506107_2294562379122663327_n.jpg">
+<h3 style="font-family: 'Courier New', Courier, monospace; margin-top: -62px;margin-left: 150px;">Tennis club Next Gen</h3>
+
+<form action="reservation.php" method="post">
+    <div class="elem-group">
+      <label for="name">Вашето име</label>
+      <input type="text" id="name" name="visitor_name" placeholder="Иван Иванов" >
+    </div>
+    <div class="elem-group">
+      <label for="email">Вашият e-mail</label>
+      <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+    </div>
+    <div class="elem-group">
+      <label for="phone">Вашият телефонен номер</label>
+      <input type="tel" id="phone" name="visitor_phone" placeholder="359-88-888-888" pattern=(\d{3})-?\s?(\d{5})-?\s?(\d{9}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label for="adult">Възрастни</label>
+      <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="child">Деца</label>
+      <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkin-date">Дата на тренировката</label>
+      <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <br><form action="/action_page.php">
+        <label for="appt">Изберете час</label>
+        <input type="time" id="appt" name="appt">
+      </form>
+    <div class="elem-group">
+      <label for="room-selection">Изберете треньор</label>
+      <select id="room-selection" name="room_preference" required>
+          <option value="">Изберете</option>
+          <option value="connecting">Петър Атанасов</option>
+          <option value="adjoining">Габриела Славова</option>
+          <option value="adjacent">Таня Сократова</option>
+          <option value="adjacent">Без треньор</option>
+      </select>
+    </div>
+    <div class="elem-group">
+        <label for="room-selection">Изберете вид корт</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Изберете</option>
+            <option value="connecting">Оранжев</option>
+            <option value="adjoining">Хард</option>
+            <option value="adjacent">Трева</option>
+            <option value="adjacent">Зала</option>
+        </select>
+      </div>
+      <div class="elem-group">
+        <label for="room-selection">Изберете вид тренировка</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Изберете</option>
+            <option value="connecting">Индивидуална</option>
+            <option value="adjoining">Групова</option>
+        </select>
+      </div>
+    <hr>
+    <div class="elem-group">
+      <label for="message">Добавете съобщение</label>
+      <textarea id="message" name="visitor_message" placeholder="Добавете информация, която трябва да знаем" required></textarea>
+    </div>
+    <button type="submit">Разервирайте корт</button>
+  </form>
+</body>
